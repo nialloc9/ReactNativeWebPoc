@@ -1,44 +1,45 @@
-# React Native Web with TypeScript
-
-![image](https://i.imgur.com/sa5z3DR.gif)
+# Proof of concept for react native web using typescript
 
 ## install
 
 ```sh
 npm i -g yarn
-git clone git@github.com:ethanneff/react-native-web-typescript.git
+
+git clone git@github.com:nialloc9/react-native-web-typescript.git
+
 cd react-native-web-typescript
+
 yarn install
 ```
 
 ### run
 
 ```sh
-yarn ios
+    yarn start:ios
 ```
 
 ```sh
-yarn android
+    yarn start:android
 ```
 
 ```sh
-yarn web
+    yarn start:web
 ```
 
 ### lint
 
 ```sh
-yarn lint
+    yarn lint
 ```
 
 ### test
 
 ```sh
-yarn test
+    yarn test
 ```
 
 ### deploy
 
 ```sh
-yarn build
+    yarn build
 ```
