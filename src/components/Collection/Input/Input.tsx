@@ -33,7 +33,7 @@ class Input extends React.Component<InputI> {
 
             const response = type === "string" ? text : parseInt(text, 10);
 
-            onChange(String(response))
+            onChange(response)
         }
         
     }
