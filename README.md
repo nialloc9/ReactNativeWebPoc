@@ -75,3 +75,5 @@ yarn install
 - For web components a new file is created for each base component where it maps styles to web values. Style is removed from props before being passed to the Dom.
 
 - Web components implement <a href="https://www.styled-components.com/docs/api">styled-components</a> library to eliminate the need to use inline styling as react-native-web does.
+
+- Collections pass down multiple objects to override the style for each base element used.
