@@ -1,6 +1,7 @@
 import * as React from "react";
 import { TextInput as NativeInput, ViewProps } from "react-native";
 import Styled from "styled-components"
+import { mergeStyle } from "../../../utils/style"
 
 export type ViewInterface = Pick<ViewProps, "style">
 
@@ -22,7 +23,7 @@ const StyledInput : any = Styled(
 const Text = (props : ViewInterface & T) : React.ReactNode => {
     const { style, ...rest } = props
 
-    return <StyledInput {...style} {...rest} />
+    return <StyledInput {...mergeStyle(style)} {...rest} />
 }
 
 export default Text

@@ -30,7 +30,7 @@ class Input extends React.Component<InputI> {
 
     static containerDefaultStyle = {
         alignSelf: "stretch",
-        backgroundColor: "red"
+        backgroundColor: "transparent"
     }
 
     private onChange = (text: string) : void => {

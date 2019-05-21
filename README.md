@@ -64,6 +64,8 @@ yarn install
 
 - Typescript is to be implemented.
 
+
+
 ### Approach
 
 - Components are modulized where base/core components (view/text/image etc) are built and more complicated components (collections) built on top of these.
@@ -76,4 +78,4 @@ yarn install
 
 - Web components implement <a href="https://www.styled-components.com/docs/api">styled-components</a> library to eliminate the need to use inline styling as react-native-web does.
 
-- Collections pass down multiple objects to override the style for each base element used.
+- Collections pass down multiple objects as props to override the style for each base element used.

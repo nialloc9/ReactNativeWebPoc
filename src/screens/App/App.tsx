@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
 import { Input } from "../../components/Collection"
-import {Text, View} from "../../components/Base"
+import {Text, View, Button} from "../../components/Base"
 
 const styles = StyleSheet.create({
   container: {
@@ -41,7 +41,7 @@ class App extends React.Component <Props, State> {
             <SafeAreaView style={styles.container}>
                 <View>
                     <Text>{`${firstname} ${lastname}`}</Text>
-
+                    <Button text="hello" style={{ button: {backgroundColor: "red"} }} />
                 </View>
                 <Input isRequired label="First" onChange={this.onUpdateFirst} />
                 <Input isRequired label="Last" onChange={this.onUpdateLast} />
