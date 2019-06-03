@@ -17,7 +17,7 @@ interface Styles {
     textAlign?: string | boolean;
 }
 
-const Block : any = Styled("div")`
+const Block : any = Styled("a")`
     ${({ backgroundColor = false } : Styles) => backgroundColor && `background-color: ${backgroundColor};`}
     ${({ alignSelf = false } : Styles) => alignSelf && `align-self: ${alignSelf};`}
     ${({ alignItems = false } : Styles) => alignItems && `align-items: ${alignItems};`}

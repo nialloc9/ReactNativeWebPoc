@@ -8,4 +8,4 @@ export const mergeStyle =
 /**
  * @description turns px into rem
  */
-export const remCalc = (pixels:any) :string => `${(pixels / 10).toFixed(4)}rem`
+export const remCalc = (pixels:any) :string => `${(pixels / 16).toFixed(4)}rem`

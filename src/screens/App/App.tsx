@@ -1,16 +1,7 @@
 import * as React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native";
 import { Input } from "../../components/Collection"
-import {Text, View, Button} from "../../components/Base"
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    backgroundColor: "#F5FCFF",
-    flex: 1,
-    justifyContent: "center"
-  }
-});
+import {Text, View, Button, Image} from "../../components/Base"
 
 interface Props {}
 interface State {
@@ -38,13 +29,26 @@ class App extends React.Component <Props, State> {
         const { firstname, lastname } = this.state
 
         return(
-            <SafeAreaView style={styles.container}>
-                <View>
-                    <Text>{`${firstname} ${lastname}`}</Text>
-                    <Button text="hello" style={{ button: {backgroundColor: "red"} }} />
+            <SafeAreaView style={{
+                alignItems: "center",
+                backgroundColor: "#F5FCFF",
+                flex: 1,
+                justifyContent: "center"
+              }}>
+                <View style={{ padding: 10 }}>
+                    <Button text="hello" style={{ button: { backgroundColor: "red" } }} />
                 </View>
-                <Input isRequired label="First" onChange={this.onUpdateFirst} />
-                <Input isRequired label="Last" onChange={this.onUpdateLast} />
+
+                <View>
+                    <Image style={{ width: 200, height: 200 }} source={require("../../assets/placeholder.png")} />
+                </View>
+
+                <Text style={{ padding: 10 }}>{`${firstname} ${lastname}`}</Text>
+
+                <View style={{ width: 200 }}>
+                    <Input isRequired label="First" onChange={this.onUpdateFirst} />
+                    <Input isRequired label="Last" onChange={this.onUpdateLast} />
+                </View>
             </SafeAreaView>
         )
     }

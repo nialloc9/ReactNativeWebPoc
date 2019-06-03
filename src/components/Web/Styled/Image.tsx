@@ -1,4 +1,5 @@
 import Styled from "styled-components"
+import { Image as NativeImage } from "react-native"
 import { remCalc } from "../../../utils/style"
 
 interface Styles {
@@ -17,7 +18,7 @@ interface Styles {
     textAlign?: string | boolean;
 }
 
-const Block : any = Styled("div")`
+const  Image: any = Styled(NativeImage)`
     ${({ backgroundColor = false } : Styles) => backgroundColor && `background-color: ${backgroundColor};`}
     ${({ alignSelf = false } : Styles) => alignSelf && `align-self: ${alignSelf};`}
     ${({ alignItems = false } : Styles) => alignItems && `align-items: ${alignItems};`}
@@ -33,4 +34,4 @@ const Block : any = Styled("div")`
     ${({ textAlign = false } : Styles) => textAlign && `text-align: ${textAlign};`}
 `;
 
-export default Block
+export default Image

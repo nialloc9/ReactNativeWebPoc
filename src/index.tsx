@@ -1,6 +1,6 @@
 // app entry
 import { AppRegistry } from "react-native";
-import {App} from "./screens";
+import App from "./screens/App";
 import config from "./utils/config";
 
 // register the app
@@ -12,3 +12,6 @@ if (config.isWeb) {
     rootTag: document.getElementById(config.web.root)
   });
 }
+
+
+

@@ -1,8 +1,10 @@
 import React from "react";
 import { TouchableHighlight, View } from "react-native";
 import {Text} from "../"
+import {Block} from "../../Web/Styled"
 import { defaultStyle } from "./Button.style"
 import { mergeStyle } from "../../../utils/style"
+import config from "../../../utils/config"
 
 interface Props {
     text: string,
@@ -29,7 +31,10 @@ class Button extends React.Component <Props, {}> {
         accessibilityTraits: "button",
         underlayColor: undefined,
         activeOpacity: 1,
-        style: {}
+        style: {
+            button: {},
+            text: {},
+        }
     }
 
     get text() {
@@ -71,7 +76,6 @@ class Button extends React.Component <Props, {}> {
         } = this.props
 
         const result = {
-            title: this.text,
             style: defaultStyle.text
         }
         
@@ -80,22 +84,41 @@ class Button extends React.Component <Props, {}> {
         return result
     }
 
-    /**
-     * NOTE: View is needed around text due to https://github.com/facebook/react-native/issues/1040
-     */
-    public render() : React.ReactNode{
-        return (
-            <TouchableHighlight {...this.touchableHighlightProps}>
+    renderNative = () => (
+        <TouchableHighlight {...this.touchableHighlightProps}>
                 <View>
                     <Text
-                        numberOfLines={1}
                         {...this.textProps}
                     >
                         {this.text}
                     </Text>
                 </View>
             </TouchableHighlight>
+    )
+
+    renderWeb = () => {
+        const { style, ...rest } = this.touchableHighlightProps
+         
+        return (
+            <Block {...style} >
+                <TouchableHighlight {...rest}>
+                    <View>
+                        <Text
+                            numberOfLines={1}
+                            {...this.textProps}
+                        >
+                            {this.text}
+                        </Text>
+                    </View>
+                </TouchableHighlight>
+            </Block>
         )
+    }
+    /**
+     * NOTE: View is needed around text due to https://github.com/facebook/react-native/issues/1040
+     */
+    public render() : React.ReactNode{
+        return config.isWeb ? this.renderWeb() : this.renderNative()
     }
 }
 
