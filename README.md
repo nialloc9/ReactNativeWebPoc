@@ -1,6 +1,6 @@
 # Proof of concept for react native web using typescript
 
-<img src="https://raw.githubusercontent.com/nialloc9/ReactNativeWebPoc/master/screenshots/web.png" alt='web' width="300">
+<img src="https://raw.githubusercontent.com/nialloc9/ReactNativeWebPoc/master/screenshots/web.png" alt='web' width="300" display="inline-block">
 
 <img src="https://raw.githubusercontent.com/nialloc9/ReactNativeWebPoc/master/screenshots/ios.png" alt='ios' width="300">
 
